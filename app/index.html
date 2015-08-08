@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <!-- In production, only one script (pdf.js) is necessary -->
+  <!-- In production, change the content of PDFJS.workerSrc below -->
+  <script src="../build/pdf.js"></script>
+  <link rel="stylesheet" href="style.css">
+<script>
+    // Specify the main script used to create a new PDF.JS web worker.
+    // In production, leave this undefined or change it to point to the
+    // combined `pdf.worker.js` file.
+    PDFJS.workerSrc = '../build/worker_loader.js';
+  </script>
+  <script src="gridview.js"></script>
+</head>
+
+<body>
+      <div class="container">
+    <header class="ad-header">
+      <div class="ad-header__brand">Grid View</div>
+      <!-- /.ad-header__brand -->
+      <div class="ad-header__scroll">
+        <div class="ad-header__scroll__text">Keep Calm and Scroll</div>
+        <a href="#" class="ad-header__scroll__arrow"></a>
+      </div>
+      <!-- /.ad-header__arrow -->
+    </header>
+    <!-- /.ad-header -->
+  </div>
+  <!-- /.container -->
+  <header class="ad-nav" id='header'>
+    <div class='brand'>
+        <a class='logo' href='#'>AD</a>
+    </div>
+  </header>
+  <div class="container container--grid">
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-1"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">I LOVE MOVIES</div>
+                    <div class="ad-box__meta__info">Everything I learned I learned from the movies.</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-2"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">XMEN </div>
+                    <div class="ad-box__meta__info">Just because someone stumbles and loses their path.</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-3"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">THE UX GURU</div>
+                    <div class="ad-box__meta__info">I believe life is an intelligent thing: that things aren't random.</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-4"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">BATMAN</div>
+                    <div class="ad-box__meta__info">You either die a hero or you live long enough to see yourself become the villain</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-5"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">I LOVE CUPCAKES</div>
+                    <div class="ad-box__meta__info">When you share a cupcake, you share love.</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-6"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">THE UX GURU</div>
+                    <div class="ad-box__meta__info">I believe life is an intelligent thing: that things aren't random.</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-7"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">INTERSTELLAR</div>
+                    <div class="ad-box__meta__info">"I have an itch, heading back to base."-Cooper</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-8"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">I LOVE MOVIES</div>
+                    <div class="ad-box__meta__info">Everything I learned I learned from the movies.</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+    <div class="ad-box">
+        <div class="ad-box__content">
+            <canvas id="adCanvas-9"></canvas>
+            <div class="ad-box__overlay">
+                <div class="ad-box__meta">
+                    <div class="ad-box__meta__text">XMEN </div>
+                    <div class="ad-box__meta__info">Just because someone stumbles and loses their path, doesn't mean they're .</div>
+                    <!-- /.ad-box__meta__info -->
+                </div>
+                <!-- /.ad-box__meta -->
+                <div class="ad-box__actions">
+                    <div class="ad-box__actions__action ad-box__actions__action--delete" onclick="adAction(this, 'delete');"><i class="fa fa-times"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__edit" onclick="adAction(this, 'edit');"><i class="fa fa-pencil"></i></div>
+                    <div class="ad-box__actions__action ad-box__actions__share" onclick="adAction(this, 'share');"><i class="fa fa-share "></i></div>
+                </div>
+              <!-- /.ad-box__actions   -->
+            </div>
+            <!-- /.ad-box__overlay -->
+        </div>
+        <!-- /.ad-box__content -->
+    </div>
+    <!-- /.ad-box -->
+  </div>
+  <!-- /.container -->
+  <div id="tn-box-wrap">
+    <section class="tn-box-wrapper tn-box-wrapper--del" id="tn-box-wrapper-del">  
+      <div class="tn-box tn-box-color-1 tn-box-delete">
+        <p>Remove Action</p>
+        <div class="tn-progress"></div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section class="tn-box-wrapper tn-box-wrapper--edit" id="tn-box-wrapper-edit">  
+      
+      <div class="tn-box tn-box-color-2">
+        <p>Edit Action</p>
+        <div class="tn-progress"></div>
+      </div>
+      
+    </section>
+    <!-- /section -->
+    <section class="tn-box-wrapper tn-box-wrapper--share" id="tn-box-wrapper-share">  
+      <div class="tn-box tn-box-color-3">
+        <p>Sharing is Caring :)<p>
+        <div class="tn-progress"></div>
+      </div>
+      
+    </section>
+    <!-- /section -->
+  </div>
+</body>
+
+</html>
